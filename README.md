@@ -30,10 +30,12 @@ Stage 2.<br>
 Until (do... until a condition is met)
 
 Stage 3.<br>
-Solving a math problem step by step, Searching for relevant and discarding irrelevant information in a problem
-&nbsp;&nbsp; | X | X
-&nbsp;&nbsp; | X | &nbsp;&nbsp;
-X | &nbsp;&nbsp; | &nbsp;&nbsp;
+Solving a math problem step by step, Searching for relevant and discarding irrelevant information in a problem<br>
+<pre>
+&nbsp;&nbsp;&nbsp;| X | X
+&nbsp;&nbsp;&nbsp;| X |&nbsp;&nbsp;&nbsp;
+&nbsp;X |&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+</pre>
 (See XNOR gate, only those with 0 or 2 highlighted will be highlighted)
 
 Stage 4.<br>
