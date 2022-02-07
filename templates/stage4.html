@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/stage4.css') }}">
+    <script src="{{ url_for('static', filename='packages/jquery-3.6.0.min.js') }}"></script>
+
+    <title>Scavenger Hunt</title>
+</head>
+<body>
+    <button class="back" onclick="history.back()"><img src="{{ url_for('static', filename='img/left-arrow.png') }}" alt="Back" width='50'/></button>
+
+    <h1>Robot Line Tracing</h1>
+
+    <h2>Put your computational thinking skills to the test again!</h2>
+    <p>In computational thinking, being able to derive a list of steps to complete <span class="specialletter">a</span> certain task is crucial.<br/>
+    More information about the line tracing algorithm will be given below.</p>
+
+    <h2>Line Tracing Algorithm</h2>
+    <img src="{{ url_for('static', filename='img/stage4-robot.png') }}"/>
+    <p>The red circle is the light sensor, and takes in a certain input.<br/>
+    If the robot is more on the black line than the white side, the value of the light sensor is lower (i.e. darker), and vice versa.<br/>
+    The goal is to keep it on the centre at all times to keep it straight.</p>
+
+    <p>The robot moves using the motor A (left motor) and motor C (right motor).<br/>
+    If they both move at the same speed, the robot moves straight.<br/>
+    If A (left motor) moves faster, the robot turns right, and vice versa.</p>
+
+    <p>More resources:
+        <br/>A similar algorithm using 2 light sensors instead<br/><a href="https://www.futurelearn.com/info/courses/robotics-with-raspberry-pi/0/steps/75899" class="text" target="_blank">https://www.futurelearn.com/info/courses/robotics-with-raspberry-pi/0/steps/75899</a>
+    </p>
+
+    <p>Now, rearrange the steps in the way you would solve the problem, and get the robot to move straight.<br/>
+    Darkened steps cannot be moved and are already correct.
+
+    </p>
+    <div class="olwrapper">
+    <ol id="prelist" class="{{ wrong }}">
+        <li>Start infinite loop of all the steps below</li>
+    </ol>
+    <ol id="list" class="{{ wrong }}" start="2"></ol>
+    <ol id="postlist" class="{{ wrong }}" start="7">
+        <li>Else, if light value is ok: carry out step below</li>
+        <li>Drive straight</li>
+    </ol>
+    </div>
+    <p class="errcode {{ wrong }}">Wrong order. Try again.</p>
+    <form class="form" method="POST" action="{{ url_for('stage4handler') }}">
+    <input class="jshelper" id="txt" name="txt" type="text"/>
+    <button type="submit" class="btn">Submit</button>
+    </form>
+
+    <script src="{{ url_for('static', filename='scripts/stage4.js') }}"></script>
+</body>
+</html>

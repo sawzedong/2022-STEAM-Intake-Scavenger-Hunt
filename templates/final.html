@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/final.css') }}">
+
+    <title>Scavenger Hunt</title>
+</head>
+<body>
+    <div class="">
+    <h1>Congrats!</h1>
+    <p>You have completed the scavenger hunt.</p>
+    <p>{{ final[0][0] }}</p>
+    <div class="wrapper">
+    <ol>
+        {% for i in range(1, length) %}
+            {% if final[i][1] == 0 %}
+                <li>{{ final[i][0] }}</li>
+            {% elif final[i][1] == 1 %}
+                <ol class="indent" type="a">
+                    {% for j in final[i][0] %}
+                        <li>{{ j }}</li>
+                    {% endfor %}
+                </ol>
+            {% endif %}
+        {% endfor %}
+    </ol>
+    <a href="{{ link }}" class="text" target="_blank">{{ link }}</a>
+    </div>
+
+    <p>Thank you!</p>
+    </div>
+    
+</body>
+</html>

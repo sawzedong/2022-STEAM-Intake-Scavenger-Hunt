@@ -1,0 +1,143 @@
+body {
+    padding: 0;
+}
+
+input, label, button, select {
+    font-size: 1.2em !important;
+}
+
+p {
+    font-size: 1.15em;
+    line-height: 1.6em;
+}
+
+select {
+    background: none;
+    border: none;
+    color: white;
+}
+
+.align-mid {
+    margin: 0 !important;
+    position: absolute !important;
+    width: max-content;
+    max-width: 80vw;
+    min-height: 50vh;
+}
+
+.instructions, .instructions p {
+    /* border: 1px solid white; */
+    margin-top: 0;
+}
+
+button.txt {
+    color: lightblue;
+    text-decoration: 1px solid lightblue underline;
+}
+a:active.text {
+    color: pink;
+}
+
+input {
+    background: none;
+    border: 1px solid #ffd55e;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+}
+
+body {
+    background-color: black;
+}
+.custom-select {
+    text-align: left;
+  position: relative;
+  font-family: Arial;
+  width: 7em;
+margin-left: 1em;
+
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+  background: none;
+  border: 1px solid #ffd55e !important;
+  border-radius: 5px;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 17px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 10px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid #ffd55e;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 1.2em;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background: none;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: #ffd55e22;
+}
+
+label {
+    line-height: 1.8em;
+}
+
+.main-cont {
+    padding: 2em 3em;
+}
+img {
+    max-width: 90vw;
+}
+
+.postinput {
+    display: inline !important;
+}
+.inputs {
+    display: flex;
+    justify-content: center;
+}
+
+.q1 {
+    margin-top: 3em;
+}
+.q2 {
+    margin-top: 5em;
+}

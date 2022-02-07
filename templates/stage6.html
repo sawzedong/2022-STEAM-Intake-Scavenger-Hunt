@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/stage6.css') }}">
+    <script src="{{ url_for('static', filename='packages/jquery-3.6.0.min.js') }}"></script>
+
+    <title>Scavenger Hunt</title>
+</head>
+<body>
+    <button class="back" onclick="history.back()"><img src="{{ url_for('static', filename='img/left-arrow.png') }}" alt="Back" width='50'/></button>
+    
+    <div class="align-mid pos-absolute main-cont">
+    <div class="instructions">
+        <h1>Final task: Code</h1>
+        <p>Remember the special letters? Combine them to form the final code</p>
+        <p>If you didn't keep track of them, go back to the previous pages to look for the bolded letters (or select the whole page to see them in a different colour)</p>
+        <p>Please key in the letters from the start slowly (keys may not be picked up if typed too fast)</p>
+    </div>
+    <form class="finalinput {{ wrong }}" id="finalinput" method="POST" action="{{ url_for('stage6handler') }}">
+        <input type="text" name="input1" id="input1" />
+        <input type="text" name="input2" id="input2" />
+        <input type="text" name="input3" id="input3" />
+        <input type="text" name="input4" id="input4" />
+        <input type="text" name="input5" id="input5" />
+        <button class="btn clear" type="button" id="clear">⟲</button>
+        <br>
+        <p class="{{ wrong }} errcode">You have keyed in the wrong code!</p>
+        <br>
+        <button class="btn" type="submit">Submit</button>
+    </form>
+    </div>
+    <script src="{{ url_for('static', filename='scripts/stage6.js') }}"></script>
+</body>
+</html>

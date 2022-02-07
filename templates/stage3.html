@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/stage3.css') }}">
+    <script src="{{ url_for('static', filename='packages/jquery-3.6.0.min.js') }}"></script>
+
+    <title>Scavenger Hunt</title>
+</head>
+<body>
+    <button class="back" onclick="history.back()"><img src="{{ url_for('static', filename='img/left-arrow.png') }}" alt="Back" width='50'/></button>
+		<h2>What is Computational Thinking?</h2>
+		<p>Computational thinking (CT) is a probl<span class="specialletter">e</span>m solving process with the aid of computer; i.e. formulating a problem and expressing its solution in such a way that a computer can effectively carry it out. <br/>It includes a number of characteristics, such as breaking a problem into small and repetitive ordered steps, logically ordering and analyzing data and creating solutions that can be effectively implemented as algorithms running on computer. <br/>As such, computational thinking is essential not only to the Computer Science discipline, it can also be used to support problem solving across all disciplines, including math, science, engineering, business, finance and humanities.</p>
+		<p class="credits"><em>Definition taken from Nanyang Technological University's website</em></p>
+		<br>
+        <p>
+            Other resources:<br>
+            <a href="https://en.wikipedia.org/wiki/Computational_thinking" class="text" target="_blank">https://en.wikipedia.org/wiki/Computational_thinking</a><br/>
+            <a href="https://www.bbc.co.uk/bitesize/guides/zp92mp3/revision/1" class="text" target="_blank">https://www.bbc.co.uk/bitesize/guides/zp92mp3/revision/1</a>
+    <div>
+			<h2>Now that you've learn more about computational thinking, time to put your skills to the test!</h2>
+            <p class="reattempt">(Note: If you get either question wrong, you need to reattempt <span class="underline">both</span> questions.)<p>
+			<form method="POST" action="{{ url_for('stage3handler') }}">
+                <p>Q1. Which of the following are examples of computational thinking?</p>
+                <div class="check-wrapper">
+                <label for="q1-a" class="container">
+                    Solving a math problem step by step
+                    <input type="checkbox" id="q1-a" name="q1" value="a">
+                    <span class="checkmark {{ q1wrong }}"></span>
+                </label>
+                <label for="q1-b" class="container">
+                    Designing a T-shirt using your creativity
+                    <input type="checkbox" id="q1-b" name="q1" value="b">
+                    <span class="checkmark {{ q1wrong }}"></span>
+                </label>
+                <label for="q1-c" class="container">
+                    Randomly guessing where a shop is in a mall
+                    <input type="checkbox" id="q1-c" name="q1" value="c">
+                    <span class="checkmark {{ q1wrong }}"></span>
+                </label>
+                <label for="q1-d" class="container">
+                    Searching for relevant and discarding irrelevant information in a problem
+                    <input type="checkbox" id="q1-d" name="q1" value="d">
+                    <span class="checkmark {{ q1wrong }}"></span>
+                </label>
+                </div>
+                <p class="errcode {{ q1wrong }}">Wrong answer for Q1. Try again.</p>
+                <p class="errcode {{ q1correct }}">Your previous answer for Q1 was correct.</p>
+                <br/>
+                
+                <p>Q2. Pattern recognition is also another component of computational thinking. Try to work out the pattern below.</p>
+                <img src="{{ url_for('static', filename='img/stage3-q2a.png') }}" class="q2"/><br/>
+                <img src="{{ url_for('static', filename='img/stage3-q2b.png') }}" class="q2"/><br/>
+                <img src="{{ url_for('static', filename='img/stage3-q2c.png') }}" class="q2"/><br/>
+                <p>Click on the squares to fill or un-fill them.</p><br/>
+                <table class="{{ q2wrong }}">
+                    <tr>
+                        <td id="0"></td>
+                        <td id="1"></td>
+                        <td id="2"></td>
+                    </tr>
+                    <tr>
+                        <td id="3"></td>
+                        <td id="4"></td>
+                        <td id="5"></td>
+                    </tr>
+                    <tr>
+                        <td id="6"></td>
+                        <td id="7"></td>
+                        <td id="8"></td>
+                    </tr>
+                </table>
+                <p class="errcode {{ q2wrong }}">Wrong answer for Q2. Try again.</p>
+                <p class="errcode {{ q2correct }}">Your previous answer for Q2 was correct.</p>
+                <input class="jshelper" name="q2txt" id="q2txt" type="text"/>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='scripts/stage3.js') }}"></script>
+</body>
+</html>

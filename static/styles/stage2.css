@@ -1,0 +1,86 @@
+body {
+    padding: 0;
+}
+
+input, label, button {
+    font-size: 1.2em !important;
+}
+
+p {
+    font-size: 1.15em;
+    line-height: 1.6em;
+}
+
+select {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: white;
+}
+
+.align-mid {
+    margin: 0 !important;
+    position: absolute !important;
+    width: max-content;
+    max-width: 80vw;
+    min-height: 50vh;
+}
+
+.instructions, .instructions p {
+    /* border: 1px solid white; */
+    margin-top: 0;
+}
+
+button.txt {
+    color: lightblue;
+    text-decoration: 1px solid lightblue underline;
+}
+a:active.text {
+    color: pink;
+}
+
+#code1 {
+    background: none;
+    border: 1px solid #ffd55e;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+}
+
+#code2 {
+    text-align: left;
+    width: max-content;
+    margin: auto;
+}
+
+label {
+    line-height: 1.8em;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  border-radius: 50%;
+  width: 1.2em;
+  height: 1.2em;
+
+  border: 2px solid #999;
+  transition: 0.2s all linear;
+  margin-right: 0.5em;
+  margin-bottom: -0.1em;
+
+  position: relative;
+  top: 4px;
+}
+
+input[type="radio"]:checked {
+  border: 0.4em solid #ffd55e;
+}
+.main-cont {
+    padding: 2em 3em;
+}
+img {
+    max-width: 90vw;
+}

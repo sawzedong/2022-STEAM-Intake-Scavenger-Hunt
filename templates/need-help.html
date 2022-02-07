@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+
+    <title>Scavenger Hunt</title>
+</head>
+<body>
+    <div class="cont-2 no-top-margin">
+        <div class="subcont-2">
+            <h2>Need help?</h2>
+            <div class="instructions-cont">
+            <ol>
+                <li>Use this if you have visual impairments (e.g. colourblindness),<br/>
+                or only have mobile device (not recommended),<br/>
+                or just need help with any of the stages,<br/>
+                or if you consistently encounter an error on our webpage.</li>
+                <li>You may email <a href="mailto: saw.zedong@dhs.sg" class="text">saw.zedong@dhs.sg</a>.</li>
+                <li>Please also introduce your name and class.</li>
+                <li>Please also try to avoid spamming the email unnecessarily.</li>
+                <li>If your email is sent after 19 January, 8pm, <br>you may not get a response in time to complete it before the deadline.</li>
+                <li>Thank you!</li>
+            </ol>
+            </div>
+
+            <a href="{{ url_for('index') }}"><button class="btn">Return to home page</button></a>
+        </div>
+    </div>
+</body>
+</html>

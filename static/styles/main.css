@@ -1,0 +1,87 @@
+body {
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+button.btn {
+    background-color: #ffd55e;
+    font-size: 1.5em;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button.txt {
+    background: none;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+button:hover.btn {
+    background-color: #ffce47;
+}
+button:active.btn {
+    background-color: #ffc72e;
+}
+button.back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: none;
+    border: none;
+    margin: 1em 0.5em;
+    cursor: pointer;
+}
+button.back img {
+    width: 2em;
+}
+.align-mid {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+.jshelper {
+    width: 10px;
+    height: 10px;
+    opacity: 0;
+    position: absolute;
+}
+a:link.text {
+    color: lightblue;
+}
+a:active.text {
+    color: pink;
+}
+a:visited.text {
+    color: #ba73d9;
+}
+
+.pos-absolute {
+    position: absolute !important;
+}
+
+*::selection {
+    background-color: #8e44ad;
+    color: white;
+}
+
+.specialletter {
+    font-weight: bolder;
+}
+.specialletter::selection {
+    background-color: #cb9201;
+    color: white;
+}
+.underline {
+    text-decoration: 1px solid white underline;
+}

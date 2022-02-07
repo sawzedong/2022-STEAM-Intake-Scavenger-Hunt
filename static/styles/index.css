@@ -1,0 +1,118 @@
+
+
+body {
+    padding: 0;
+}
+
+.main-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0;
+}
+.cont-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.subcont-1 {
+    line-height:3em;
+    font-size: 1.2em;
+}
+.subcont-1 h1, .subcont-1 p {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.cont-2 {
+    line-height: 1.7em;
+    font-size: 1.2em;
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    height: max-content;
+    padding: 1em;
+}
+
+.subcont-2 {
+    margin: auto;
+}
+.instructions-cont {
+    text-align: left;
+    width: max-content;
+    padding: 5px;
+    margin: auto;
+}
+#bottom-object {
+    bottom: 0;
+}
+
+.cont-2 h2 {
+    margin: 0;
+}
+
+.cont-2 ol {
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+}
+
+.arrows {
+	width: 60px;
+	height: 72px;
+	position: absolute;
+	left: 50%;
+	margin-left: -30px;
+	bottom: 20px;
+}
+
+.arrows path {
+	stroke: #2994D1;
+	fill: transparent;
+	stroke-width: 1px;	
+	animation: arrow 2s infinite;
+	-webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+.arrows path.a1 {
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+	animation-delay:-0.5s;
+	-webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 {	
+	animation-delay:0s;
+	-webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
+
+.no-top-margin {
+    margin-top: 0 !important;
+    top: 0 !important;
+}
+
+.strong_underline {
+    text-decoration: 1px solid white underline;
+}

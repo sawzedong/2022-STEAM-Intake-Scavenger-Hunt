@@ -1,0 +1,12 @@
+p {
+    font-size: 1.2em;
+}
+
+div {
+    position: absolute !important;
+}
+
+iframe {
+    max-width: 90vw;
+    min-height: 50vh;
+}

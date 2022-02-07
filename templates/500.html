@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/error.css') }}">
+
+    <title>Scavenger Hunt</title>
+</head>
+<body>
+    <div class="align-mid pos-absolute">
+        <h1>
+            <span class="errcode">500</span>
+            <br/>
+            <span class="errdesc">Internal Server Error</span>
+        </h1>
+        <p>
+            This is most likely an error caused by coding issues.
+            <br/>This may also be caused if you attempted to manually type in links and accessed a locked resource.
+            <br/>If the problem persists, please visit <a href="{{ url_for('need_help') }}" class="text">https://intake-2022.szd101.repl.co/need-help</a>.
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/stage2.css') }}">
+    <script src="{{ url_for('static', filename='packages/jquery-3.6.0.min.js') }}"></script>
+
+    <title>Scavenger Hunt</title>
+</head>
+<body>
+    <button class="back" onclick="history.back()"><img src="{{ url_for('static', filename='img/left-arrow.png') }}" alt="Back" width='50'/></button>
+		<div class="main-cont">
+			<div class="instructions">
+				<p>Welcome back! We hope you enjoyed the video.</p>
+				<p>To get to the next stage, concatenate the answers to these two questions together and fill in the blank below to get the web address you need to visit for you next task.</p>
+        <p>Click on the link when you have keyed in your answer:</p>
+			</div>
+			<form class="web-address" method="POST" action="{{ url_for('routehandler') }}">
+            <!-- The input below will be not be displayed, and exists just to help the javascript code-->
+                <input type="text" class="jshelper" id="link" name="link"> 
+				<button class="txt" id="finallink">https://Intake-2022.szd101.repl.co/<span id="txt1">___</span>-<span id="txt2">___</span></button>
+			</form>
+			<div class="questions">
+				<label for="code1"><p>Q1) What was the sum of the <span class="specialletter">t</span>wo codes?</p></label>
+                <input type="number" min="1" max="999" id="code1" name="code1"> 
+				<label for="code2"><p>Q2) What type of loop is shown below?</p></label>
+                <img src="{{ url_for('static', filename='img/stage2-code-sample.png') }}" alt="Sample code for Q2" width='300'/>
+                <form name="code2" id="code2" multiple>
+                    <label for="code2-until">
+                        <input type="radio" id="code2-until" name="code2" value="until">
+                        Until loop
+                    </label><br/>
+                    <label for="code2-while">
+                        <input type="radio" id="code2-while" name="code2"value="while">
+                        While loop
+                    </label><br/>
+                    <label for="code2-for">
+                        <input type="radio" id="code2-for" name="code2" value="for">
+                        For loop
+                    </label>
+                </form>
+			</div>
+		</div>
+    <script src="{{ url_for('static', filename='scripts/stage2.js') }}"></script>
+</body>
+</html>

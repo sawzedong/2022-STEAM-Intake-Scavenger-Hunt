@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+
+    <title>Scavenger Hunt</title>
+</head>
+<body>
+    <div class="main-cont">
+        <div class="cont-1">
+            <div class="subcont-1 align-mid">
+            <h1>
+                <span class="header">STEAM Collective CCA Intake 2022</span>
+								<br>
+								<span class="subheader">Scavenger Hunt</span>
+            </h1>
+            <p>Please access this on a laptop / PC. Mobile not recommended.</p>
+            </div>
+            <svg class="arrows">
+							<path class="a2" d="M0 20 L30 52 L60 20"></path>
+							<path class="a3" d="M0 40 L30 72 L60 40"></path>
+						</svg>
+        </div>
+        <div class="cont-2">
+            <div class="subcont-2">
+            <h2>Instructions</h2>
+            <div class="instructions-cont">
+            <ol>
+                <li>In this scavenger hunt, you will be brought to several webpages.</li>
+                <li>Complete the tasks by following the instructions.</li>
+                <li>Press 'Submit' / 'Next', and you will proceed if the answers are correct.</li>
+                <li>If you see a error (404) page, you have keyed in a wrong answer.</li>
+                <li>You may reattempt the task by going back.</li>
+                <li>Pay attention to bolded letters.<br>Select the text of the whole page to see them in a different colour.<br>Try on this page!</li>
+                <li>If you need help with any of the stages,<br/>or need special arrangements (like visual impairments / only own a mobile device),<br/>please visit <a href="{{ url_for('need_help') }}" class="text">https://intake-2022.szd101.repl.co/need-help</a>.
+                <li>Please complete this by <strong class="strong_underline">19 January 2022, 2359</strong></li>
+                <li>That'<span class="specialletter">s</span> all, good luck and have fun!</li>
+            </ol>
+            </div>
+
+            <a href="{{ url_for('stage1') }}"><button class="btn">Next</button></a>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

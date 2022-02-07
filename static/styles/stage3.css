@@ -1,0 +1,146 @@
+h2 {
+	margin: 50px 120px 20px 120px;
+}
+
+p {
+	margin: 15px 5em;
+    font-size: 1.2em;
+    line-height: 1.6em;
+}
+
+.credits {
+	text-align: right;
+}
+.container {
+    font-size: 1.2em;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    transition: 0.2s all;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background: none;
+    border: 1px solid #ffd55e;
+    border-radius: 5px;
+    transition: 0.2s all;
+}
+.checkmark.q1wrong {
+    border: 1px solid #eb4034 !important;
+    animation: 0.5s shake;
+}
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #ffd55e;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    transition: 0.2s all;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 8px;
+    top: 4px;
+    width: 5px;
+    height: 10px;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    transition: 0.2s all;
+}
+
+.check-wrapper {
+    width: max-content;
+    margin: auto;
+    text-align: left;
+}
+
+.errcode {
+    display: none;
+}
+
+.errcode.q1wrong, .errcode.q2wrong {
+    display: block;
+    color: #eb4034;
+}
+.errcode.q1correct, .errcode.q2correct {
+    display: block;
+    color: #67d685;
+}
+
+img.q2 {
+    max-height: 25vh;
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+table td {
+    border: 3px solid #9e9e9e;
+    width: 3em;
+    height: 3em;
+    transition: 0.2s all;
+    background: black;
+    cursor: pointer;
+}
+table.q2wrong td {
+    border: 3px solid #eb4034;
+}
+table {
+    border-collapse: collapse;
+    margin: auto;
+    margin-bottom: 1.5em;
+}
+
+.clicked {
+    background: #fff;
+}
+.reattempt {
+    margin-top: -1em;
+}

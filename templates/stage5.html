@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/stage5.css') }}">
+    <script src="{{ url_for('static', filename='packages/jquery-3.6.0.min.js') }}"></script>
+
+    <title>Scavenger Hunt</title>
+</head>
+<body>
+    <button class="back" onclick="history.back()"><img src="{{ url_for('static', filename='img/left-arrow.png') }}" alt="Back" width='50'/></button>
+		<div class="main-cont">
+			<div class="instructions">
+                <h1>
+                    <span class="header">Latitude and Longitude</span>
+                    <br>
+                    <span class="desc">Confucius (孔子) Statue, Dunman High School</span>
+                </h1>
+			</div>
+			<form class="web-address" method="POST" action="{{ url_for('routehandler') }}">
+            <!-- The input below will be not be displayed, and exists just to help the javascript code-->
+                <input type="text" class="jshelper" id="link" name="link"> 
+				<button class="txt" id="finallink">https://Intake-2022.szd101.repl.co/<span id="txt1a">___</span><span id="txt1b">_</span>-<span id="txt2a">___</span><span id="txt2b">_</span></button>
+			</form>
+            
+			<div class="questions">
+                <div class="q1">
+				<label for="code1a"><p>Latitude (rounded to 2 decimal places)</p></label>
+                <div class="inputs">
+                    <input type="number" min="0" max="180" id="code1a" name="code1a" step="0.01">
+                    <div class="postinput">
+                        <div class="custom-select">
+                            <select name="code1b" id="code1b">
+                                <option value="">&ZeroWidthSpace;</option>
+                                <option value="N">°N</option>
+                                <option value="S">°S</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="q2">
+				<label for="code2a" class="code2alabel"><p>Longitude (rounded to 2 deci<span class="specialletter">m</span>al places)</p></label>
+                    <div class="inputs">
+                    <input type="number" min="0" max="180" id="code2a" name="code2a" step="0.01"> 
+                    <div class="postinput">
+                        <div class="custom-select">
+                            <select name="code2b" id="code2b">
+                                <option value="">&ZeroWidthSpace;</option>
+                                <option value="E">°E</option>
+                                <option value="W">°W</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                </div>
+			</div>
+		</div>
+    <script src="{{ url_for('static', filename='scripts/stage5.js') }}"></script>
+</body>
+</html>

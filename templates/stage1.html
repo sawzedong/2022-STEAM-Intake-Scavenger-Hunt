@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/stage1.css') }}">
+
+    <title>Scavenger Hunt</title>
+</head>
+<body>
+    <button class="back" onclick="history.back()"><img src="{{ url_for('static', filename='img/left-arrow.png') }}" alt="Back" width='50'/></button>
+    <div class="align-mid">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/KFVdHDMcepw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p>Watch the above video, and press 'Next' when done.</p>
+    <p>Alternatively, watch it on YouTube at <a href="https://youtu.be/KFVdHDMcepw" class="text" target="_blank">https://youtu.be/KFVdHDMcepw</a></p>
+    <p>(Watching the rest of the series is optional)</p>
+
+    <a href="{{ url_for('stage2') }}"><button class="btn">Next</button></a>
+    </div>
+</body>
+</html>
