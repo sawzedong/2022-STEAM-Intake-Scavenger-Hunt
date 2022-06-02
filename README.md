@@ -26,7 +26,7 @@ Stage 1.<br>
 No questions
 
 Stage 2.<br>
-134 (watch the video)
+134 (watch the video)  
 Until (do... until a condition is met)
 
 Stage 3.<br>
@@ -76,11 +76,13 @@ Templates and pages are coded using HTML and CSS, but submission of answers are 
 
 jQuery is used for any front-end javascript involved (such as the changing link as text input changes)
 
-As replit's are public to all, the answers and route links are placed in a .env file and queried using `os.environ['KEY_NAME']`. Do ensure to run `import os` at the start of the file.
+As replit's are public to all, the answers and route links are placed in a .env file and queried using `os.environ['KEY_NAME']`. Do ensure to run `import os` at the start of the file.  
+**IMPORTANT: env.json is only present to show what the hidden keys and texts used in the 2022 Intake exercise were. Do NOT upload the answers as a file that is visible. (if using replit, there is an inbuilt secrets function).**
 
 Although mostly unnecessary, an additional layer of answer protection is added by hash comparison instead of storing plaintext, using `hashlib.sha3_256('YOUR TEXT').hexdigest()`. Again, run `import hashlib` at the start of the code.
 
-As [replit.com](replit.com) timeout and go down after about an hour of inactivity, to prevent issues with re-syncing and having to keep pressing 'run', [https://uptimerobot.com/](https://uptimerobot.com/) is used to constant ping the website every 5 minutes or so to keep it running. (Thanks to 2020 - 2021 EXCO for suggesting during the Discord Bot lessons)
+As [replit.com](replit.com) timeout and go down after about an hour of inactivity, to prevent issues with re-syncing and having to keep pressing 'run', [https://uptimerobot.com/](https://uptimerobot.com/) is used to constant ping the website every 5 minutes or so to keep it running. (Thanks to 2020 - 2021 EXCO for suggesting during the Discord Bot lessons)  
+*Note: this bot has been discontinued as the website is no longer used since 8 April 2022.*
 
 ## Help
 [https://flask.palletsprojects.com/en/2.0.x/](https://flask.palletsprojects.com/en/2.0.x/)
